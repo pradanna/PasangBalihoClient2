@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.news.NewsFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/toolBarHeight"
+        android:background="@drawable/shadow_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/marginstart_tittle_fragment"
+            android:fontFamily="@font/poppinsbold"
+            android:text="News"
+            android:textColor="@color/textColorDark"
+            android:textSize="@dimen/text_size_title_fragment" />
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_kosong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_kosong"
+            android:layout_width="@dimen/gambarkosong"
+            android:layout_height="@dimen/gambarkosong"
+            android:src="@drawable/ic_kosong"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.40" />
+
+        <TextView
+            android:id="@+id/text_kosong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default_menu_utama"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Belum ada berita nih... "
+            android:textColor="@color/textColorDark"
+            android:textSize="@dimen/text_kosong"
+            app:layout_constraintEnd_toEndOf="@+id/image_kosong"
+            app:layout_constraintStart_toStartOf="@+id/image_kosong"
+            app:layout_constraintTop_toBottomOf="@+id/image_kosong" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view_news"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_default_menu_utama"
+        android:layout_marginEnd="@dimen/margin_default_menu_utama"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar" />
+
+    <include layout="@layout/loading_mid_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

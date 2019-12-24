@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "331184035355",
+    "firebase_url": "https://pasangbalihoclient.firebaseio.com",
+    "project_id": "pasangbalihoclient",
+    "storage_bucket": "pasangbalihoclient.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331184035355:android:bb1bb90898749245650abe",
+        "android_client_info": {
+          "package_name": "com.genossys.pasangbalihoclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331184035355-1megadu5hjpjtm1piskk3qhqc3rhba1e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.genossys.pasangbalihoclient",
+            "certificate_hash": "6eccd9db0bcf40d50a73c592575b855125510040"
+          }
+        },
+        {
+          "client_id": "331184035355-afrng6pffuei47fdm5imk60dmsjioe0s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.genossys.pasangbalihoclient",
+            "certificate_hash": "0c95fa457da405b4cba9912a2708a1b5968d3b79"
+          }
+        },
+        {
+          "client_id": "331184035355-o6amrk67vj02ag6qqrnkokao903jql4b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZKbUuRMMLgGY_XlRUrMEgor1lQOr725I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331184035355-o6amrk67vj02ag6qqrnkokao903jql4b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/frontdrop">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/frontdrop">
+
+            <RelativeLayout
+                android:id="@+id/layout_tittle_fragment"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/toolBarHeight"
+                android:background="@drawable/shadow_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/marginstart_tittle_fragment"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="@string/account_tittle_fragment"
+                    android:textColor="@color/textColorDark"
+                    android:textSize="@dimen/text_size_title_fragment" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_show_mini_accuont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/frontdrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_tittle_fragment">
+
+
+                <ImageView
+                    android:id="@+id/imageView_avatar"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="@dimen/marginstartLayout"
+                    android:layout_marginStart="@dimen/marginstart_items"
+                    android:layout_marginTop="@dimen/marginstart_items"
+                    android:layout_marginBottom="@dimen/marginstart_items"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/profilkosong"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textview_fullname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginstart_items"
+                    android:layout_marginEnd="@dimen/margin_default_menu_utama_besar"
+                    android:textColor="@color/textColorDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imageView_avatar"
+                    app:layout_constraintTop_toTopOf="@id/imageView_avatar" />
+
+                <TextView
+                    android:id="@+id/textview_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginstart_items"
+                    android:layout_marginEnd="@dimen/margin_default_menu_utama_besar"
+                    android:textColor="@color/textColorDark"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imageView_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/textview_fullname" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_login_accuont"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/frontdrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Anda belum login"
+                        app:layout_constraintBottom_toTopOf="@+id/button_sign_in"
+                        app:layout_constraintEnd_toEndOf="@id/button_sign_in"
+                        app:layout_constraintStart_toStartOf="@+id/button_sign_in" />
+
+                    <Button
+                        android:id="@+id/button_sign_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Masuk / Daftar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_history"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_default_menu_utama_besar"
+                android:background="@color/frontdrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_show_mini_accuont">
+
+                <ImageView
+                    android:id="@+id/icon_history"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="@dimen/marginstartLayout"
+                    android:layout_marginTop="@dimen/martopdefault"
+                    android:layout_marginBottom="@dimen/martopdefault"
+                    android:src="@drawable/ic_access_time_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/text_history"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginstartLayout"
+                    android:layout_marginEnd="@dimen/marginstartLayout"
+                    android:text="History Transaksi"
+                    app:layout_constraintBottom_toBottomOf="@+id/icon_history"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon_history"
+                    app:layout_constraintTop_toTopOf="@id/icon_history" />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/text_history"
+                    app:layout_constraintStart_toStartOf="@+id/text_history" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_bantuan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/frontdrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_history">
+
+                <ImageView
+                    android:id="@+id/icon_bantuan"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="@dimen/marginstartLayout"
+                    android:layout_marginTop="@dimen/martopdefault"
+                    android:layout_marginBottom="@dimen/martopdefault"
+                    android:src="@drawable/ic_help_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/text_bantuan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginstartLayout"
+                    android:layout_marginEnd="@dimen/marginstartLayout"
+                    android:text="Bantuan"
+                    app:layout_constraintBottom_toBottomOf="@+id/icon_bantuan"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon_bantuan"
+                    app:layout_constraintTop_toTopOf="@id/icon_bantuan" />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/text_bantuan"
+                    app:layout_constraintStart_toStartOf="@+id/text_bantuan" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_privacy_policy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/frontdrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_bantuan">
+
+                <ImageView
+                    android:id="@+id/icon_privacy_policy"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="@dimen/marginstartLayout"
+                    android:layout_marginTop="@dimen/martopdefault"
+                    android:layout_marginBottom="@dimen/martopdefault"
+                    android:src="@drawable/ic_error_outline_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/text_privacy_policy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginstartLayout"
+                    android:layout_marginEnd="@dimen/marginstartLayout"
+                    android:text="Privacy Policy"
+                    app:layout_constraintBottom_toBottomOf="@+id/icon_privacy_policy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon_privacy_policy"
+                    app:layout_constraintTop_toTopOf="@id/icon_privacy_policy" />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/text_privacy_policy"
+                    app:layout_constraintStart_toStartOf="@+id/text_privacy_policy" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_sign_out"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/frontdrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_beri_nilai">
+
+                <ImageView
+                    android:id="@+id/icon_sign_out"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="@dimen/marginstartLayout"
+                    android:layout_marginTop="@dimen/martopdefault"
+                    android:layout_marginBottom="@dimen/martopdefault"
+                    android:src="@drawable/ic_do_not_disturb_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/text_sign_out"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginstartLayout"
+                    android:layout_marginEnd="@dimen/marginstartLayout"
+                    android:text="Sign Out"
+                    android:textColor="@color/color_danger"
+                    app:layout_constraintBottom_toBottomOf="@+id/icon_sign_out"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon_sign_out"
+                    app:layout_constraintTop_toTopOf="@id/icon_sign_out" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/text_sign_out"
+                    app:layout_constraintStart_toStartOf="@+id/text_sign_out" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_beri_nilai"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/frontdrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_privacy_policy">
+
+                <ImageView
+                    android:id="@+id/icon_beri_nilai"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="@dimen/marginstartLayout"
+                    android:layout_marginTop="@dimen/martopdefault"
+                    android:layout_marginBottom="@dimen/martopdefault"
+                    android:src="@drawable/ic_star_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/text_beri_nilai"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginstartLayout"
+                    android:layout_marginEnd="@dimen/marginstartLayout"
+                    android:text="Beri Nilai / Rate"
+                    app:layout_constraintBottom_toBottomOf="@+id/icon_beri_nilai"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icon_beri_nilai"
+                    app:layout_constraintTop_toTopOf="@id/icon_beri_nilai" />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/text_beri_nilai"
+                    app:layout_constraintStart_toStartOf="@+id/text_beri_nilai" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallPulseIndicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
